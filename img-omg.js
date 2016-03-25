@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function getReplacement(image) {
     var request = new XMLHttpRequest();
-    request.open('GET', 'http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=cat', true);
+    request.open('GET', 'https://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=cat', true);
     request.onload = function() {
       if (request.status >= 200 && request.status < 400) {
         var data = JSON.parse(request.responseText);
