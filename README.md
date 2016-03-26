@@ -5,7 +5,7 @@
 
 > OMG :flushed:
 
-What do you think? Users could hover over images and see the same old image without any change? **BORING**! Use `img-omg` everywhere to make your users ZOMGWTFBBQ over how pretty they can see moving images instead when hovering!
+What do you think? Users could hover over images and see the same old image without any change? **BORING**! Use `img-omg` everywhere to make your users ZOMGWTFBBQ over how they can see pretty moving images when hovering!
 
 [Demo](https://bullg.it/img-omg/)
 
