@@ -6,8 +6,13 @@ document.addEventListener('DOMContentLoaded', function () {
   for (var i = images.length; i--;) {
     getReplacement(images[i]);
     images[i].dataset.orginalImage = images[i].getAttribute('src');
-    images[i].addEventListener('mouseenter', replaceImage);
-    images[i].addEventListener('mouseleave', restoreImage);
+    if ('ontouchstart' in window) {
+      images[i].addEventListener('touchstart', replaceImage);
+      images[i].addEventListener('touchend', restoreImage);
+    } else {
+      images[i].addEventListener('mouseenter', replaceImage);
+      images[i].addEventListener('mouseleave', restoreImage);
+    }
   }
 
   function getReplacement(image) {
@@ -25,11 +30,11 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function replaceImage(e) {
-    e.toElement.setAttribute('src', e.toElement.dataset.gif);
+    e.target.setAttribute('src', e.target.dataset.gif);
   }
 
   function restoreImage(e) {
-    e.fromElement.setAttribute('src', e.fromElement.dataset.orginalImage);
+    e.target.setAttribute('src', e.target.dataset.orginalImage);
   }
 
 });
